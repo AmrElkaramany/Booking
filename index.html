@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar-light header-sticky ">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <!-- Logo START -->
+                <a class=" navbar-brand" href="index.html">
+                    <img class="light-mode-item navbar-brand-item w-100" src="images/logo.svg" alt="logo">
+                </a>
+                <!-- Logo END -->
+
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto ms-sm-0 p-0 p-sm-2 bg-danger" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="d-none d-sm-inline-block small">Menu</span>
+                </button>
+
+                <!-- Responsive category toggler -->
+                <button class="navbar-toggler ms-sm-auto mx-3 me-md-0 p-0 p-sm-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarCategoryCollapse"
+                    aria-controls="navbarCategoryCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid-3x3-gap-fill fa-fw"></i><span
+                        class="d-none d-sm-inline-block small">Category</span>
+                </button>
+
+                <!-- Main navbar START -->
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+                        <!-- Nav item Listing -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#">Listings</a>
+
+                        </li>
+
+                        <!-- Nav item Pages -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Pages</a>
+
+                        </li>
+
+                        <!-- Nav item Account -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accounntMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Accounts</a>
+
+                        </li>
+
+                        <!-- Nav item link 3dot-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="advanceMenu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- Main navbar END -->
+
+                <!-- Nav category menu START -->
+                <div class="navbar-collapse collapse hftc " id="navbarCategoryCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll nav-pills-primary-soft text-center ms-auto p-2 p-xl-0">
+                        <!-- Nav item Hotel -->
+                        <li class="nav-item ">
+                            <a class="nav-link hotel-item me-2 " href="index.html">
+                                <i class="fa-solid fa-hotel me-2 "></i>Hotel</a>
+                        </li>
+
+                        <!-- Nav item Flight -->
+                        <li class="nav-item">
+                            <a class="nav-link me-2 " href="index-flight.html">
+                                <i class="fa-solid fa-plane me-2"></i>Flight</a>
+                        </li>
+
+                        <!-- Nav item Tour -->
+                        <li class="nav-item">
+                            <a class="nav-link me-2 " href="index-tour.html">
+                                <i class="fa-solid fa-globe-americas me-2"></i>Tour</a>
+                        </li>
+
+                        <!-- Nav item Cabs -->
+                        <li class="nav-item">
+                            <a class="nav-link me-2 " href="index-cab.html">
+                                <i class="fa-solid fa-car me-2"></i>Cab</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav category menu END -->
+
+                <!-- Profile and Notification START -->
+                <ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+
+                    <!-- Notification dropdown START -->
+                    <li class="nav-item dropdown ms-0 ms-md-3 position-relative me-4">
+                        <!-- Notification button -->
+                        <a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                        <!-- Notification dote -->
+                        <i class="fa-solid fa-circle fa-fade text-danger position-absolute top-0 translate-middle"></i>
+                    </li>
+                    <!-- Notification dropdown END -->
+                    <!-- Profile dropdown START -->
+                    <li class="nav-item ms-3 dropdown">
+                        <!-- Avatar -->
+                        <a class="avatar avatar-sm p-0" href="#" >
+                            <img class="avatar-img rounded-2" src="images/avatar/03.jpg" alt="avatar">
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <main>
+        <section class="hotels pt-3 pt-lg-5">
+            <div class="container">
+                <div class="row g-4 g-lg-5 position-relative">
+                    <div class="col-lg-6">
+                        <h1 class="mb-4 mt-md-5 text-black display-2 fw-bold ">Find the top
+                            <span class="position-relative display-2 fw-bold">
+                                Hotels nearby
+                                <span
+                                    class="position-absolute top-50 start-50 translate-middle z-index-n1 d-none d-md-block mt-4">
+                                    <svg width="390.5px" height="21.5px" viewBox="0 0 445.5 21.5">
+                                        <path class="fill-primary opacity-7 "
+                                            d="M409.9,2.6c-9.7-0.6-19.5-1-29.2-1.5c-3.2-0.2-6.4-0.2-9.7-0.3c-7-0.2-14-0.4-20.9-0.5 c-3.9-0.1-7.8-0.2-11.7-0.3c-1.1,0-2.3,0-3.4,0c-2.5,0-5.1,0-7.6,0c-11.5,0-23,0-34.5,0c-2.7,0-5.5,0.1-8.2,0.1 c-6.8,0.1-13.6,0.2-20.3,0.3c-7.7,0.1-15.3,0.1-23,0.3c-12.4,0.3-24.8,0.6-37.1,0.9c-7.2,0.2-14.3,0.3-21.5,0.6 c-12.3,0.5-24.7,1-37,1.5c-6.7,0.3-13.5,0.5-20.2,0.9C112.7,5.3,99.9,6,87.1,6.7C80.3,7.1,73.5,7.4,66.7,8 C54,9.1,41.3,10.1,28.5,11.2c-2.7,0.2-5.5,0.5-8.2,0.7c-5.5,0.5-11,1.2-16.4,1.8c-0.3,0-0.7,0.1-1,0.1c-0.7,0.2-1.2,0.5-1.7,1 C0.4,15.6,0,16.6,0,17.6c0,1,0.4,2,1.1,2.7c0.7,0.7,1.8,1.2,2.7,1.1c6.6-0.7,13.2-1.5,19.8-2.1c6.1-0.5,12.3-1,18.4-1.6 c6.7-0.6,13.4-1.1,20.1-1.7c2.7-0.2,5.4-0.5,8.1-0.7c10.4-0.6,20.9-1.1,31.3-1.7c6.5-0.4,13-0.7,19.5-1.1c2.7-0.1,5.4-0.3,8.1-0.4 c10.3-0.4,20.7-0.8,31-1.2c6.3-0.2,12.5-0.5,18.8-0.7c2.1-0.1,4.2-0.2,6.3-0.2c11.2-0.3,22.3-0.5,33.5-0.8 c6.2-0.1,12.5-0.3,18.7-0.4c2.2-0.1,4.4-0.1,6.7-0.1c11.5-0.1,23-0.2,34.6-0.4c7.2-0.1,14.4-0.1,21.6-0.1c12.2,0,24.5,0.1,36.7,0.1 c2.4,0,4.8,0.1,7.2,0.2c6.8,0.2,13.5,0.4,20.3,0.6c5.1,0.2,10.1,0.3,15.2,0.4c3.6,0.1,7.2,0.4,10.8,0.6c10.6,0.6,21.1,1.2,31.7,1.8 c2.7,0.2,5.4,0.4,8,0.6c2.9,0.2,5.8,0.4,8.6,0.7c0.4,0.1,0.9,0.2,1.3,0.3c1.1,0.2,2.2,0.2,3.2-0.4c0.9-0.5,1.6-1.5,1.9-2.5 c0.6-2.2-0.7-4.5-2.9-5.2c-1.9-0.5-3.9-0.7-5.9-0.9c-1.4-0.1-2.7-0.3-4.1-0.4c-2.6-0.3-5.2-0.4-7.9-0.6 C419.7,3.1,414.8,2.9,409.9,2.6z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </span>
+                        </h1>
+                        <p class="mb-4 text-muted fs-6">We bring you not only a stay option, but an experience in your
+                            budget to enjoy the luxury.
+                        </p>
+                        <!-- Buttons -->
+                        <div class="d-flex  align-items-center gap-4">
+                            <a href="#" class="btn btn-discover mb-0">Discover Now</a>
+                            <a href="https://www.youtube.com/embed/tXHviS-4ygo" class="d-block">
+                                <!-- Avatar -->
+                                <div class="avatar avatar-md z-index-1 position-relative meee-2">
+                                    <img class="avatar-img rounded-circle" src="images/12.jpg" alt="avatar">
+                                    <!-- Video button -->
+                                    <div
+                                        class="btn btn-xs btn-round btn-white shadow-sm position-absolute top-50 start-50 translate-middle z-index-9 mb-0">
+                                        <i class="fas fa-play bg-white p-2 rounded-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="align-middle d-inline-block">
+                                    <h6 class="fw-bold small mb-0 text-black ">Watch our story</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 position-relative">
+                        <img src="images/bg/06.jpg" class="rounded w-100" alt="">
+                        <!-- Svg decoration -->
+                        <figure class="position-absolute end-0 bottom-0">
+                            <svg width="163px" height="163px" viewBox="0 0 163 163">
+                                <path class="fill-warning"
+                                    d="M145.6,66.2c-0.9-0.3-1.6,0.2-2.1-0.4c-0.5-0.7-1-1.5-1-2.4c0-3.1,0.1-6.2,0-9.3c0-0.7,0.3-1.3,0.5-1.9 c0.8-1.6,1.6-3.2,2.7-4.5c0.5-0.6,1.2-1.2,2-1.5c0.4-0.2,0.8,0.4,1.3-0.1c0.4-0.4,1,0.7,1.6,0.7c0.4,1-0.4,1.5-1,2.1 c0.7,0.3,1.4,0.3,2.1,0.7c0.6,0.4,1.2,0.7,1,1.5c-0.2,1,0.6,1.3,1,1.9c-0.2,0.3-0.6,0.4-0.5,0.8c1.2,3.2,0.3,5.4-0.7,8.1 c-0.3,0.7-0.7,1.6-0.7,2.2c-0.1,1.5-1.2,2.7-1.4,4.1c-0.2,1.1-0.9,1.7-2.1,1.6c-0.2,0-0.4,0.5-1,0.4c-0.2-0.2-0.7-0.5-0.7-0.8 c0-1-0.1-1.7-1.1-2.1C145.5,67.2,145.6,66.6,145.6,66.2">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M94.3,143.5c1.1,0.3,2.4-0.5,3.2,0.7c-0.4,0.7-0.7,1.4-1,2.1c0.5,0.5,0.7,0.2,1.2,0.1c1.6-0.6,2-0.4,2.5,1.2 c0.1,0.2,0,0.6,0.3,0.6c1.8,0.4,1.4,2.2,2.1,3.2c-0.8,0.9,0.5,1.8,0.1,2.6c-0.5,0.8-0.3,2-1.3,2.6c-0.3,0.2-0.1,0.5-0.2,0.7 c-0.3,2.1-1.2,3.7-3.4,4.4c-0.3,0.1-0.4,0.6-1,0.4c-0.3-0.6-0.6-1.3-1-1.9c-0.5-0.2-1.5,0.3-1.4-1h-3c-0.2-1.4,0-2.9-1.1-3.9 c-0.1-0.1-0.1-0.4,0-0.5c0.7-1.2,0.2-2.6,0.7-3.8c0.3-0.6,0.4-1,0.1-1.6c-0.9-1.3,0-2.4,0.7-3.3C92.5,145,93.4,144.3,94.3,143.5">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M119.6,77.3c-0.4,0.8-1.1,0.6-2,0.8c0.2,1.1-0.4,2.2,0.5,3.3c-0.8,0-0.8,0-1.2-0.3c-0.6,0.3-0.8,1-1.2,1.6 c0.1-1.9-0.6-3.2-2-4.1c-0.6-0.1-0.7,0.3-1,0.5c-1-1.9-1-2.8-0.2-7.7c0.4-2.5,1.7-4.6,3.6-6.8c0.6-0.1,1.5,1.5,2.3,0 c0.8,1.5-0.7,2.3-0.8,3.7c0.8-0.4,1.6-0.7,2.4-0.4c0.4,0.4-0.1,1,0.3,1.4c0.8,0.6,1.4,1.3,0.4,2.3c1.1,0.8-0.3,1.5-0.1,2.4 c0.2,0.8,0,1.7,0,2.5c-0.8-0.2-1-1.1-1.8-1C118.2,76.4,119.5,76.5,119.6,77.3">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M25,131c-0.3-0.6-1.2-0.3-1.7-0.5v-1.2c-0.1-0.1-0.1-0.2-0.2-0.2c-1.4,0.5-2.2-1-3.4-1.2 c-1.2-0.1-1.9-1-2.1-2.2c-0.1-0.5,0.1-0.8,0.5-1.1c-2-1.7-0.8-3.4-0.1-5.1c0.8-2.2,2.6-2.5,4.6-2.4c0.4,1.1,0.2,2-0.6,2.7 c1.5,1,2-0.5,3-0.8c0.3,0.6,0.6,1.2,0.9,1.6c0,0.6-0.8,0.8-0.4,1.4c0.7,0.8,0.9-0.5,1.7-0.3c1,0.9,0.9,2.2,0.8,3.4 c0.4,0.1,0.6,0.2,1,0.3c-0.1,0.6-1,0.8-1,1.5c0,0.8,0.8,0.2,1,0.7C27.7,128.8,26.9,130.3,25,131">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M84.9,95H87c0.4,0.4,0.3,1.6-0.3,2.8c1.2,1,1.7-0.5,2.4-0.8c0.8,0,0.8,0.6,1.2,0.7c0.2,0.8-0.7,0.9-0.4,1.7 c0.5,0.3,1.7,0,1.9,0.9c0.2,0.7,0.3,1.5-0.5,2.1c0.3,0.1,0.6,0.2,0.9,0.3c-0.1,0.7-1.1,1.3-0.5,2.2c-1.1,1.5-3,2.1-4.4,3.3 c-0.3,0.2-0.8,1-1.5,0.5c-0.3-0.4,0.4-0.4,0.3-0.8c-0.7-0.5-1.6,0.1-2.4-0.3c-0.2-0.6,0.1-1.4-0.8-1.8c-1.1,0.5-2.2,0.7-3.2-0.8 c1.3-0.8,3-1.1,3.2-3c-1,0-1.7,0.9-2.7,1c-0.2-0.2-0.5-0.4-0.8-0.7c-0.1-0.1,0.1-0.1,0.2-0.3c0.6-1.1,2.4-1,2.5-2.5 c1.2-0.5,1.1-1.7,1.3-2.5C83.8,96.3,84.3,95.7,84.9,95">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M41.2,153.9c0.3-0.7,0.9-0.8,0.4-1.6c-0.3-0.3-1.1,0.2-1.8-0.2c0-0.2-0.1-0.4-0.1-0.7c-0.1-0.1-0.2-0.2-0.3,0 c-0.3,0.4-0.7,0.4-1.1,0.4c-1.3,0-1.5-0.4-1.6-1.7c0-0.6,0.4-0.8,0.5-1.4c-0.4,0-0.8-0.1-1.4-0.1c-0.4-1.9,0.7-3.6,1.1-5.4 c0.2-0.9,1.6-1.3,2.7-1.3c0.4,0.2,0.3,0.6,0.3,0.7c0.2,0.4,0.3,0.3,0.4,0.1c0.6-0.5,1.3-0.6,1.7,0.1c0.5,0.7,1.1,0.6,1.8,0.7 c0.4,0.4,0.1,0.8,0.2,1.2c0.3,0.4,0.8,0.2,1.3,0.3c1,0.7,0.5,2.1,1.3,2.9C43.8,152.3,43.1,153.1,41.2,153.9">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M70.9,43.4c-0.3-1.4-1.2-1.8-2.6-1.5c-1.2-2.3-0.8-4.8-0.5-7.2c0.1-0.5,0.4-1.1,0.3-1.7 c-0.2-1.1,0.5-1.9,0.6-2.9c0.1-0.7,1.3-0.9,2-1.3c0.9,0.8,0.9,0.8,1.2,2c0.3,0,0.6,0,0.4,0c1.3,0,0.8,0.9,1.3,1.2 c0.3,0.1,0.8,0.5,0.7,1c-0.2,0.8,1,1.4,0.5,2.1c-0.5,0.7-0.2,1.5-0.5,2.1c-0.8,1.5-1,3.2-1.5,4.8C72.6,43.1,72,43.4,70.9,43.4">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M125.4,118.4c-0.4-0.3-0.6-0.7-1.3-0.8c-1.6-0.1-1.6-0.2-1.9-1.9c-1.1-0.4-2.2,0-3.2,0.4 c-0.5-0.5-0.2-0.9-0.4-1.4c0.4-0.1,0.7-0.2,1-0.4v-3c-0.5,0.2-1,0.3-1.7,0.5c-0.3,0-0.4-0.6-0.8-0.7c0.6-1.5,1.8-2.4,2.8-3.5 c1.3,0.3,2.6-1.1,3.8,0.4c0,0.1-0.1,1.8,0,2.1c-0.2,0-0.5,0.1-0.7,0.1c-0.2,0-0.3,0-0.5,0c-0.4,0.4-0.1,1.1-0.7,1.5 c1.3-0.5,2.4-1,3.3-2c0.4,0.4,0.7,0.8,1.4,0.6c-1.1,0.9,0.4,2.1-1,2.9c1,0,1.1-0.6,1.5-0.8c0.4-0.1,0.8-0.1,1.2-0.2 c0.5,1,1.1,1.8,0.6,3c-0.7,0.6-2.2,0.4-2.5,2.1c1.2-0.2,1.9-0.9,2.5-1.5c0.7,0.1,0.7,0.5,0.6,0.8c-1.3-0.1-1.2,1.5-2.3,1.9 c-0.9,0.3-1.6,1-2.7,1.8C124.7,119.5,125.1,119,125.4,118.4">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M101.7,41c-0.3,0.3-0.6,0.6-0.9,0.9c0.9,0.6-0.9,1.6,0.4,2.1c-2,2.3-2,2.4-2.1,4.8h-2.4c-0.2-0.1,0-0.5-0.2-0.8 c-2.4-0.3-2.9-0.8-3-3.3c0-0.6,0.2-1.4-0.5-1.8c0.5-0.7,0.2-1.6,0.7-2.4c1-1.5,2.3-2.7,3.5-3.9c0.5-0.2,1-0.1,1.4,0 c0.2,1-1.1,1.6-0.2,2.6c0.3-0.4,0.6-0.8,0.9-1.3C100.2,39.2,101.7,39.5,101.7,41">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M140.4,5.4c-0.4,0.6-1.2-0.1-1.5,0.6c0.7,0.4,1.5,0.1,2.3,0.2c0.3,1.1,0.9,2.1,1.3,3.2c0.9,2.4,0.3,4.4-0.6,6.6 c-0.4,0.9-0.9,1.2-1.9,1c-0.2-0.5-0.5-1.2-0.9-1.9c-0.6-0.2-1.5,0-1.9-1c0.1-1.7,0.1-3.6-1.1-5.2c0.4-0.7,0.7-1.3,1.1-1.9 c-0.3-0.1-0.6-0.2-1-0.4c0.2-0.8,0.5-1.6,1.3-2.3h2.2C140,4.6,140.5,4.8,140.4,5.4">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M65.7,68.8c-0.4,0.6-0.9,0.4-1.4,0.4c-1.2-1.1-0.4-2.9-1.4-4.1c1.5-3,1.5-3,4.1-4.2c0.5,0.1,0.8,0.5,1,1 c0.1,0.6-0.8,0.7-0.5,1.3c0.5,0.6,0.9,0.2,1.2-0.2c1.5,0.6,1.1,2.5,2.4,3.3c-0.1,1.1,0.2,2.2-0.2,3.2L69,72.2c-0.3,0-0.7,0-1,0 c-0.3-0.5-0.9-2.2-0.8-2.4C66.7,69.6,66.2,69.2,65.7,68.8">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M37.5,69.7c-0.5,0.2,0,0.9-0.4,1c-0.7,0.2-1-0.2-1.2-0.6c-0.4-0.7,0.1-1.6-0.2-2.2c-0.5-0.7-0.6-1.2-0.1-2 c0.5-0.6,0.2-1.5,0.6-2.3c0.9-2,0.9-2.1,3-2.1c0.1,0.1,0.2,0.1,0.2,0.2c0,0.3,0,0.7,0,1.1c0.7,0.4,1.7,0.1,2.1,1.3 c0.3,0.9,1.2,1.5,1,2.7c-0.2,0.9,0.1,1.8-0.8,2.5c-0.4,0.4-0.8,1.1-0.8,2c0,0.6-0.5,1-1.2,1.1c-0.6,0.1-1-0.3-1.2-0.7 C38,71,37.8,70.3,37.5,69.7">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M53.9,87.8c0.7,0,1.4,0,2.1,0c0.5,0.3,0.1,1,0.4,1.4c0.4,0.3,0.8,0.1,1.2,0.2c0.6,1.2,1.4,2.4,1.7,3.6 c0.4,1.4-0.2,2.7-0.7,4c-1,0.4-1.5-0.4-2.1-0.9c-0.7,0-1.4,0-2.1,0c-0.4-1-0.8-1.8-2.1-1.5c-0.6-0.7,0.2-1.8-0.7-2.3 c0.5-0.6,0.9-1.3,1-2.1C52.8,89.2,53.2,88.5,53.9,87.8">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M0.1,95.7c0.9-1.3,2.3-1.7,3.8-1.8c1,1.2-0.7,1.5-0.8,2.3c1.1,1,2-0.7,3.1,0c0.6,0.6-0.2,0.8-0.3,1.2 c0.4,0.5,1,0,1.4,0.3c0.4,1.1-0.3,2.3,0.6,3.3c-0.8,0.8-0.7,2.2-1.9,2.8c-1.1-0.2-1.8-1-2.6-1.7c-0.7-0.6-1.9-0.5-2.6-1.9 C1,98.9-0.4,97.4,0.1,95.7">
+                                </path>
+                                <path class="fill-warning"
+                                    d="M155.5,91.5c-0.9-0.5-1.7-0.7-2.3-1.6c0.4-0.2,0.8-0.5,1.2-0.7c-1.2-0.4-2.1,0.7-3.1,0c0.6-1,1.8-1,2.5-1.7 c0.1-0.6-0.3-0.6-0.7-0.7c-0.7-0.2-0.9,0.9-1.6,0.5c-0.3-0.3-0.4-0.7-0.1-0.9c1.7-1,3-2.3,4.5-3.5c0.9-0.7,1.1-0.9,2.5-1.2 c-0.1,0.5-0.6,0.7-0.9,1.1c0.7,0.7,1.3,0.1,1.9-0.2c0.1,1.1,0.9,1.9,0.5,3.4C158.3,87.4,157.4,89.8,155.5,91.5">
+                                </path>
+                            </svg>
+                        </figure>
+                        <div class="position-absolute top-0 end-0 z-index-1 mt-n4">
+                            <div class="bg-blur border border-light rounded-3 text-center shadow-lg p-3">
+                                <!-- Title -->
+                                <i class="fa-solid fa-headset  text-danger fs-3"></i>
+                                <h5 class="text-black fw-bold mb-1">24 / 7</h5>
+                                <h6 class="text-dark fw-bold small mb-0">Guide Supports</h6>
+                            </div>
+                        </div>
+                        <div class="vstack gap-5 position-absolute top-0 start-0  d-md-flex mt-4 ">
+                            <img class="icon-lg shadow-lg border border-3 border-white rounded-circle"
+                                src="images/category/hotel/4by3/11.jpg" alt="avatar">
+                            <img class="icon-xl shadow-lg border border-3 border-white rounded-circle"
+                                src="images/category/hotel/4by3/12.jpg" alt="avatar">
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center mt-0  rounded-3 Availability   ">
+                        <h6 class="fw-bold text-black fs-5">Check Availability
+                        </h6>
+                        <div class="col-10   p-4 d-flex parent-avail bg-white position-relative">
+                            <div class="col-lg-3 ">
+                                <div class=" form-fs-md d-flex align-items-start ">
+                                    <i class="fa-solid fa-location-dot me-2 fa-2x"></i>
+                                    <div class="d-flex flex-column position-relative ">
+                                        <label class="location text-muted" for="Location">Location</label>
+                                        <input class="rounded-3 p-3 border-1 text-muted" id="Location" type="text"
+                                            placeholder="Select Location">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-lg-3 ">
+                                <div class=" form-fs-md d-flex align-items-start ">
+                                    <i class="fa-regular fa-calendar me-2 fa-2x"></i>
+                                    <div class="d-flex flex-column position-relative ">
+                                        <label class="location text-muted" for="Location">Check In Out</label>
+                                        <input class="rounded-3 p-3 border-1 " id="Location" type="text"
+                                            placeholder="19 sep To 28 Sep">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-lg-3 ">
+                                <div class=" form-fs-md d-flex align-items-start ">
+                                    <i class="fa-regular fa-user  me-2 fa-2x"></i>
+                                    <div class="d-flex flex-column position-relative ">
+                                        <label class="location text-muted" for="Location">Guests & Rooms</label>
+                                        <input class="rounded-3 p-3 border-1 text-muted" id="Location" type="text"
+                                            placeholder="Select Location">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-search  translate-middle">
+                                <a class="icon-lg btn btn-round  mb-0" href="#">
+                                    <i class="fa-solid fa-magnifying-glass fa-fw text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Holidays my-5 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 col-lg-5 ">
+                        <div class="item-inner">
+                            <img class="w-100 rounded-3" src="images/about/01.jpg" alt="about">
+                            <figure class="position-absolute top-0 start-0 translate-middle">
+                                <svg class="fill-warning" width="77px" height="77px">
+                                    <path
+                                        d="M76.997,41.258 L45.173,41.258 L67.676,63.760 L63.763,67.673 L41.261,45.171 L41.261,76.994 L35.728,76.994 L35.728,45.171 L13.226,67.673 L9.313,63.760 L31.816,41.258 L-0.007,41.258 L-0.007,35.725 L31.816,35.725 L9.313,13.223 L13.226,9.311 L35.728,31.813 L35.728,-0.010 L41.261,-0.010 L41.261,31.813 L63.763,9.311 L67.676,13.223 L45.174,35.725 L76.997,35.725 L76.997,41.258 Z">
+                                    </path>
+                                </svg>
+                            </figure>
+                            <figure class=" fig2 position-absolute bottom-0 end-0 d-none d-md-block mb-n5 me-n4">
+                                <svg height="400" class="fill-primary opacity-2" viewBox="0 0 340 340">
+                                    <circle cx="194.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="2.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="26.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="50.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="74.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="98.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="122.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="146.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="170.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="194.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="218.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="242.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="266.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="290.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="314.2" r="2.2"></circle>
+                                    <circle cx="194.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="2.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="218.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="26.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="242.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="50.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="266.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="74.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="290.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="98.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="314.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="122.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="338.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="146.2" cy="338.2" r="2.2"></circle>
+                                    <circle cx="170.2" cy="338.2" r="2.2"></circle>
+                                </svg>
+                            </figure>
+                            <div class=" inner bg-white w-75 px-3 pt-3 rounded-3 d-flex  ">
+                                <div class="d-flex flex-column justify-content-between">
+                                    <h6 class="fs-6">Client</h6>
+                                    <ul class="img-avatar list-unstyled w-75 d-flex pt-3 ">
+                                        <li>
+                                            <img class="w-100 rounded-circle " src="images/avatar/03.jpg" alt="avatar">
+                                        </li>
+                                        <li class="avatar">
+                                            <img class=" w-100 rounded-circle " src="images/avatar/02.jpg" alt="avatar">
+                                        </li>
+                                        <li class="avatar">
+                                            <img class=" w-100 rounded-circle" src="images/avatar/03.jpg" alt="avatar">
+                                        </li>
+                                        <li class="avatar">
+                                            <img class=" w-100 rounded-circle" src="images/avatar/04.jpg" alt="avatar">
+                                        </li>
+                                        <li>
+                                            <span class="fa-stack iconk ">
+                                                <i class="fa-solid fa-circle fa-stack-2x "></i>
+                                                <i class="fa-solid fa-stack-1x fa-inverse fs-6">1k+</i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="Rating">
+                                    <h6 class="fs-6">Rating</h6>
+                                    <div class="d-flex justify-content-center align-items-center pt-4">
+                                        <span class="fs-6 fw-bold">4.5</span>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <img class=" like position-absolute top-0 start-0 translate-middle"
+                                    src="images/element/like.svg" alt="like">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <h2>The Best Holidays Start Here!
+                        </h2>
+                        <p class="mt-5">Book your hotel with us and don't forget to grab an awesome hotel deal to save
+                            massive on your stay.
+                        </p>
+                        <div class="row py-5">
+                            <div class="col-12 col-sm-6">
+                                <span class="icon-a fa-stack fa-4x">
+                                    <i class="fa-solid fa-circle  fa-stack-2x "></i>
+                                    <i class="fa-solid fa-utensils fa-stack-1x fa-inverse text-success  "></i>
+                                </span>
+                                <h4 class="pt-2">Quality Food</h4>
+                                <p>Departure defective arranging rapturous did. Conduct denied adding worthy little.</p>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="icon-b fa-stack fa-4x ">
+                                    <i class="fa-solid fa-circle  fa-stack-2x "></i>
+                                    <i class="fa-solid fa-stopwatch fa-stack-1x fa-inverse text-danger  "></i>
+                                </span>
+                                <h4 class="pt-2">Quick Services</h4>
+                                <p>Supposing so be resolving breakfast am or perfectly.</p>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="icon-c fa-stack fa-4x ">
+                                    <i class="fa-solid fa-circle  fa-stack-2x "></i>
+                                    <i class="fa-solid fa-circle-check fa-stack-1x fa-inverse text-warning  "></i>
+                                </span>
+                                <h4 class="pt-2">High Security</h4>
+                                <p>Arranging rapturous did believe him all had supported.</p>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="icon-d fa-stack fa-4x ">
+                                    <i class="fa-solid fa-circle  fa-stack-2x "></i>
+                                    <i class="fa-solid fa-bolt fa-stack-1x fa-inverse text-success  "></i>
+                                </span>
+                                <h4 class="pt-2">24 Hours Alert</h4>
+                                <p>Rapturous did believe him all had supported.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="Featured ">
+            <h2 class="text-center py-3 ">Featured Hotels</h2>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="item-Featured position-relative">
+                            <a href="#">
+                                <img class="w-100 rounded-3" src="images/category/hotel/02.jpg" alt="hotel">
+                            </a>
+                            <div class=" location text-center">
+                                <a class="btn stretched-link rounded-pill py-0" href="#">
+                                    <i class="fa-solid fa-location-dot me-1"></i>
+                                    New York
+                                </a>
+                            </div>
+                            <a href="#">
+                                <h4 class="pt-4 fw-bold ">Baga Comfort</h4>
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <a href="#">
+                                    <h5><span>$455</span> / stating at</h5>
+                                </a>
+                                <a href="#">
+                                    <span class="text-black fw-bold">4.5</span>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="item-Featured position-relative">
+                            <a href="#">
+                                <img class="w-100 rounded-3" src="images/category/hotel/02.jpg" alt="hotel">
+                            </a>
+                            <div class=" location text-center">
+                                <a class="btn stretched-link rounded-pill py-0" href="#">
+                                    <i class="fa-solid fa-location-dot me-1"></i>
+                                    California
+                                </a>
+                            </div>
+                            <a href="#">
+                                <h4 class="pt-4 fw-bold ">New Apollo Hotel</h4>
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <a href="#">
+                                    <h5><span>$585</span> / stating at</h5>
+                                </a>
+                                <a href="#">
+                                    <span class="text-black fw-bold">4.8</span>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="item-Featured position-relative">
+                            <a href="#">
+                                <img class="w-100 rounded-3" src="images/category/hotel/03.jpg" alt="hotel">
+                            </a>
+                            <div class=" location text-center">
+                                <a class="btn stretched-link rounded-pill py-0" href="#">
+                                    <i class="fa-solid fa-location-dot me-1"></i>
+                                    Los Angeles
+                                </a>
+                            </div>
+                            <a href="#">
+                                <h4 class="pt-4 fw-bold ">New Age Hotel</h4>
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <a href="#">
+                                    <h5><span>$385</span> / stating at</h5>
+                                </a>
+                                <a href="#">
+                                    <span class="text-black fw-bold">4.6</span>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="item-Featured position-relative">
+                            <a href="#">
+                                <img class="w-100 rounded-3" src="images/category/hotel/04.jpg" alt="hotel">
+                            </a>
+                            <div class=" location text-center">
+                                <a class="btn stretched-link rounded-pill py-0" href="#">
+                                    <i class="fa-solid fa-location-dot me-1"></i>
+                                    Chicago
+                                </a>
+                            </div>
+                            <a href="#">
+                                <h4 class="pt-4 fw-bold ">Helios Beach Hotel</h4>
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <a href="#">
+                                    <h5><span>$665</span> / stating at</h5>
+                                </a>
+                                <a href="#">
+                                    <span class="text-black fw-bold">4.8</span>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+        <section class="clients">
+            <div class="container">
+                <div class="row gy-5 justify-content-center  ">
+                    <div class="col-6 col-sm-3 col-xl-2 ">
+                        <img class="w-100 clients1 " src="images/client/01.svg" alt="client product">
+                    </div>
+                    <div class="col-6 col-sm-3 col-xl-2">
+                        <img class="w-100 clients1" src="images/client/02.svg" alt="client product">
+                    </div>
+                    <div class="col-6 col-sm-3 col-xl-2">
+                        <img class="w-100 clients2" src="images/client/03.svg" alt="client product">
+                    </div>
+                    <div class="col-6 col-sm-3 col-xl-2">
+                        <img class="w-100 clients3" src="images/client/04.svg" alt="client product">
+                    </div>
+                    <div class="col-6 col-sm-3 col-xl-2">
+                        <img class="w-100 clients4" src="images/client/05.svg" alt="client product">
+                    </div>
+                    <div class="col-6 col-sm-3 col-xl-2">
+                        <img class="w-100 clients5" src="images/client/06.svg" alt="client product">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container overflow-hidden ">
+            <section id="carouselExampleInterval" class="carousel slide passage mt-5 " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="container">
+                            <div class="row   d-flex justify-content-between">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="">
+                                        <div class="position-relative ">
+                                            <img class="w-100 rounded-3" src="images/team/01.jpg" alt="team">
+                                            <img class="emoji  bg-danger p-1 rounded-3 position-absolute translate-middle"
+                                                src="images/element/03.svg" alt="element">
+                                            <figure class="  d-none d-sm-block ">
+                                                <svg width="326px" height="335px" viewBox="0 0 326 335">
+                                                    <path class="fill-primary opacity-1"
+                                                        d="M7.3,0C3.3,0,0,3.3,0,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,3.3,11.3,0,7.3,0z
+                                                M59.2,0.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,4,63.2,0.7,59.2,0.7L59.2,0.7z	M111.1,1.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,4.7,115.1,1.5,111.1,1.5 C111.1,1.5,111.1,1.5,111.1,1.5L111.1,1.5z M163,2.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0 C170.3,5.5,167,2.2,163,2.2C163,2.2,163,2.2,163,2.2L163,2.2z M214.9,2.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3 c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,6.2,218.9,2.9,214.9,2.9C214.9,2.9,214.9,2.9,214.9,2.9L214.9,2.9z M266.8,3.7 c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,6.9,270.8,3.7,266.8,3.7C266.8,3.7,266.8,3.7,266.8,3.7L266.8,3.7z M318.7,4.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,7.7,322.7,4.4,318.7,4.4C318.7,4.4,318.7,4.4,318.7,4.4L318.7,4.4z M7.3,52.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,55.9,11.4,52.7,7.3,52.7C7.3,52.7,7.3,52.7,7.3,52.7L7.3,52.7z M59.2,53.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,56.7,63.3,53.4,59.2,53.4C59.2,53.4,59.2,53.4,59.2,53.4L59.2,53.4z M111.1,54.1c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,57.4,115.2,54.1,111.1,54.1C111.1,54.1,111.1,54.1,111.1,54.1L111.1,54.1z M163,54.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,58.1,167.1,54.9,163,54.9C163,54.9,163,54.9,163,54.9L163,54.9zM214.9,55.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,58.9,219,55.6,214.9,55.6C214.9,55.6,214.9,55.6,214.9,55.6L214.9,55.6z M266.8,56.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,59.6,270.9,56.3,266.8,56.3C266.8,56.3,266.8,56.3,266.8,56.3L266.8,56.3z M318.7,57c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,60.3,322.8,57.1,318.7,57C318.7,57,318.7,57,318.7,57L318.7,57zM7.3,105.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,108.6,11.4,105.3,7.3,105.3C7.3,105.3,7.3,105.3,7.3,105.3L7.3,105.3z M59.2,106c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,109.3,63.3,106.1,59.2,106C59.2,106,59.2,106,59.2,106L59.2,106z M111.1,106.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,110.1,115.2,106.8,111.1,106.8C111.1,106.8,111.1,106.8,111.1,106.8L111.1,106.8zM163,107.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,110.8,167.1,107.5,163,107.5C163,107.5,163,107.5,163,107.5L163,107.5z M214.9,108.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,111.5,219,108.3,214.9,108.2C214.9,108.2,214.9,108.3,214.9,108.2L214.9,108.2z M266.8,109c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,112.3,270.9,109,266.8,109C266.8,109,266.8,109,266.8,109L266.8,109zM318.7,109.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,113,322.8,109.7,318.7,109.7C318.7,109.7,318.7,109.7,318.7,109.7L318.7,109.7z M7.3,158c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,161.3,11.3,158,7.3,158z M59.2,158.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,162,63.2,158.7,59.2,158.7C59.2,158.7,59.2,158.7,59.2,158.7L59.2,158.7z M111.1,159.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,162.7,115.1,159.5,111.1,159.4C111.1,159.4,111.1,159.4,111.1,159.4L111.1,159.4z M163,160.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,163.5,167,160.2,163,160.2C163,160.2,163,160.2,163,160.2L163,160.2z M214.9,160.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,164.2,218.9,160.9,214.9,160.9C214.9,160.9,214.9,160.9,214.9,160.9L214.9,160.9zM266.8,161.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,164.9,270.8,161.6,266.8,161.6C266.8,161.6,266.8,161.6,266.8,161.6L266.8,161.6z M318.7,162.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,165.6,322.7,162.4,318.7,162.4C318.7,162.4,318.7,162.4,318.7,162.4L318.7,162.4z M7.3,210.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,213.9,11.4,210.7,7.3,210.6C7.3,210.6,7.3,210.6,7.3,210.6L7.3,210.6zM59.2,211.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,214.7,63.3,211.4,59.2,211.4C59.2,211.4,59.2,211.4,59.2,211.4L59.2,211.4z M111.1,212.1c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,215.4,115.2,212.1,111.1,212.1C111.1,212.1,111.1,212.1,111.1,212.1L111.1,212.1z M163,212.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,216.1,167.1,212.8,163,212.8C163,212.8,163,212.8,163,212.8L163,212.8z M214.9,213.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,216.8,219,213.6,214.9,213.6C214.9,213.6,214.9,213.6,214.9,213.6L214.9,213.6z M266.8,214.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,217.6,270.9,214.3,266.8,214.3C266.8,214.3,266.8,214.3,266.8,214.3L266.8,214.3z M318.7,215c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,218.3,322.8,215,318.7,215C318.7,215,318.7,215,318.7,215L318.7,215z M7.3,263.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,266.6,11.4,263.3,7.3,263.3C7.3,263.3,7.3,263.3,7.3,263.3L7.3,263.3z M59.2,264c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,267.3,63.3,264,59.2,264C59.2,264,59.2,264,59.2,264L59.2,264z M111.1,264.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,268,115.2,264.8,111.1,264.8C111.1,264.8,111.1,264.8,111.1,264.8L111.1,264.8z M163,265.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,268.8,167.1,265.5,163,265.5C163,265.5,163,265.5,163,265.5L163,265.5z M214.9,266.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,269.5,219,266.2,214.9,266.2C214.9,266.2,214.9,266.2,214.9,266.2L214.9,266.2z M266.8,267c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,270.2,270.9,267,266.8,267C266.8,267,266.8,267,266.8,267L266.8,267z M318.7,267.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,271,322.8,267.7,318.7,267.7C318.7,267.7,318.7,267.7,318.7,267.7L318.7,267.7z M7.4,316c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,319.2,11.4,316,7.4,316C7.3,316,7.3,316,7.4,316L7.4,316z M59.3,316.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,320,63.3,316.7,59.3,316.7C59.2,316.7,59.2,316.7,59.3,316.7L59.3,316.7z M111.2,317.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,320.7,115.2,317.4,111.2,317.4C111.1,317.4,111.1,317.4,111.2,317.4L111.2,317.4z M163.1,318.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,321.4,167.1,318.2,163.1,318.2C163,318.2,163,318.2,163.1,318.2L163.1,318.2z M215,318.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,322.2,219,318.9,215,318.9C214.9,318.9,214.9,318.9,215,318.9L215,318.9z M266.9,319.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,322.9,270.9,319.6,266.9,319.6C266.8,319.6,266.8,319.6,266.9,319.6L266.9,319.6z M318.8,320.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,323.6,322.8,320.4,318.8,320.4C318.7,320.4,318.7,320.4,318.8,320.4L318.8,320.4z">
+                                                    </path>
+                                                </svg>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                                    <div class="">
+                                        <span>
+                                            <i class="fa-solid fa-quote-right fa-6x"></i>
+                                        </span>
+                                        <h5 class="fs-4 lh-sm">Passage its ten led hearted removal cordial. Preference
+                                            any
+                                            astonished
+                                            unreserved Mrs.
+                                            understood the Preference unreserved.</h5>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                        </ul>
+                                        <h5 class="fw-bold fs-6">Carolyn Ortiz</h5>
+                                        <p class="text-muted">Ceo of Google</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="container">
+                            <div class="row  d-flex justify-content-between">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="">
+                                        <div class="position-relative">
+                                            <img class="w-100 rounded-3" src="images/team/02.jpg" alt="team">
+                                            <img class="emoji  bg-danger p-1 rounded-3 position-absolute translate-middle"
+                                                src="images/element/02.svg" alt="element">
+                                            <figure class="  d-none d-sm-block ">
+                                                <svg width="326px" height="335px" viewBox="0 0 326 335">
+                                                    <path class="fill-primary opacity-1"
+                                                        d="M7.3,0C3.3,0,0,3.3,0,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,3.3,11.3,0,7.3,0z
+                                                M59.2,0.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,4,63.2,0.7,59.2,0.7L59.2,0.7z	M111.1,1.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,4.7,115.1,1.5,111.1,1.5 C111.1,1.5,111.1,1.5,111.1,1.5L111.1,1.5z M163,2.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0 C170.3,5.5,167,2.2,163,2.2C163,2.2,163,2.2,163,2.2L163,2.2z M214.9,2.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3 c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,6.2,218.9,2.9,214.9,2.9C214.9,2.9,214.9,2.9,214.9,2.9L214.9,2.9z M266.8,3.7 c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,6.9,270.8,3.7,266.8,3.7C266.8,3.7,266.8,3.7,266.8,3.7L266.8,3.7z M318.7,4.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,7.7,322.7,4.4,318.7,4.4C318.7,4.4,318.7,4.4,318.7,4.4L318.7,4.4z M7.3,52.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,55.9,11.4,52.7,7.3,52.7C7.3,52.7,7.3,52.7,7.3,52.7L7.3,52.7z M59.2,53.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,56.7,63.3,53.4,59.2,53.4C59.2,53.4,59.2,53.4,59.2,53.4L59.2,53.4z M111.1,54.1c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,57.4,115.2,54.1,111.1,54.1C111.1,54.1,111.1,54.1,111.1,54.1L111.1,54.1z M163,54.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,58.1,167.1,54.9,163,54.9C163,54.9,163,54.9,163,54.9L163,54.9zM214.9,55.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,58.9,219,55.6,214.9,55.6C214.9,55.6,214.9,55.6,214.9,55.6L214.9,55.6z M266.8,56.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,59.6,270.9,56.3,266.8,56.3C266.8,56.3,266.8,56.3,266.8,56.3L266.8,56.3z M318.7,57c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,60.3,322.8,57.1,318.7,57C318.7,57,318.7,57,318.7,57L318.7,57zM7.3,105.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,108.6,11.4,105.3,7.3,105.3C7.3,105.3,7.3,105.3,7.3,105.3L7.3,105.3z M59.2,106c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,109.3,63.3,106.1,59.2,106C59.2,106,59.2,106,59.2,106L59.2,106z M111.1,106.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,110.1,115.2,106.8,111.1,106.8C111.1,106.8,111.1,106.8,111.1,106.8L111.1,106.8zM163,107.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,110.8,167.1,107.5,163,107.5C163,107.5,163,107.5,163,107.5L163,107.5z M214.9,108.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,111.5,219,108.3,214.9,108.2C214.9,108.2,214.9,108.3,214.9,108.2L214.9,108.2z M266.8,109c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,112.3,270.9,109,266.8,109C266.8,109,266.8,109,266.8,109L266.8,109zM318.7,109.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,113,322.8,109.7,318.7,109.7C318.7,109.7,318.7,109.7,318.7,109.7L318.7,109.7z M7.3,158c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,161.3,11.3,158,7.3,158z M59.2,158.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,162,63.2,158.7,59.2,158.7C59.2,158.7,59.2,158.7,59.2,158.7L59.2,158.7z M111.1,159.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,162.7,115.1,159.5,111.1,159.4C111.1,159.4,111.1,159.4,111.1,159.4L111.1,159.4z M163,160.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,163.5,167,160.2,163,160.2C163,160.2,163,160.2,163,160.2L163,160.2z M214.9,160.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,164.2,218.9,160.9,214.9,160.9C214.9,160.9,214.9,160.9,214.9,160.9L214.9,160.9zM266.8,161.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,164.9,270.8,161.6,266.8,161.6C266.8,161.6,266.8,161.6,266.8,161.6L266.8,161.6z M318.7,162.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,165.6,322.7,162.4,318.7,162.4C318.7,162.4,318.7,162.4,318.7,162.4L318.7,162.4z M7.3,210.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.6,213.9,11.4,210.7,7.3,210.6C7.3,210.6,7.3,210.6,7.3,210.6L7.3,210.6zM59.2,211.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.5,214.7,63.3,211.4,59.2,211.4C59.2,211.4,59.2,211.4,59.2,211.4L59.2,211.4z M111.1,212.1c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.4,215.4,115.2,212.1,111.1,212.1C111.1,212.1,111.1,212.1,111.1,212.1L111.1,212.1z M163,212.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.3,216.1,167.1,212.8,163,212.8C163,212.8,163,212.8,163,212.8L163,212.8z M214.9,213.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.2,216.8,219,213.6,214.9,213.6C214.9,213.6,214.9,213.6,214.9,213.6L214.9,213.6z M266.8,214.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.1,217.6,270.9,214.3,266.8,214.3C266.8,214.3,266.8,214.3,266.8,214.3L266.8,214.3z M318.7,215c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326,218.3,322.8,215,318.7,215C318.7,215,318.7,215,318.7,215L318.7,215z M7.3,263.3c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,266.6,11.4,263.3,7.3,263.3C7.3,263.3,7.3,263.3,7.3,263.3L7.3,263.3z M59.2,264c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,267.3,63.3,264,59.2,264C59.2,264,59.2,264,59.2,264L59.2,264z M111.1,264.8c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,268,115.2,264.8,111.1,264.8C111.1,264.8,111.1,264.8,111.1,264.8L111.1,264.8z M163,265.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,268.8,167.1,265.5,163,265.5C163,265.5,163,265.5,163,265.5L163,265.5z M214.9,266.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,269.5,219,266.2,214.9,266.2C214.9,266.2,214.9,266.2,214.9,266.2L214.9,266.2z M266.8,267c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,270.2,270.9,267,266.8,267C266.8,267,266.8,267,266.8,267L266.8,267z M318.7,267.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,271,322.8,267.7,318.7,267.7C318.7,267.7,318.7,267.7,318.7,267.7L318.7,267.7z M7.4,316c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C14.7,319.2,11.4,316,7.4,316C7.3,316,7.3,316,7.4,316L7.4,316z M59.3,316.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C66.6,320,63.3,316.7,59.3,316.7C59.2,316.7,59.2,316.7,59.3,316.7L59.3,316.7z M111.2,317.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C118.5,320.7,115.2,317.4,111.2,317.4C111.1,317.4,111.1,317.4,111.2,317.4L111.2,317.4z M163.1,318.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C170.4,321.4,167.1,318.2,163.1,318.2C163,318.2,163,318.2,163.1,318.2L163.1,318.2z M215,318.9c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C222.3,322.2,219,318.9,215,318.9C214.9,318.9,214.9,318.9,215,318.9L215,318.9z M266.9,319.6c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C274.2,322.9,270.9,319.6,266.9,319.6C266.8,319.6,266.8,319.6,266.9,319.6L266.9,319.6z M318.8,320.4c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3c0,0,0,0,0,0C326.1,323.6,322.8,320.4,318.8,320.4C318.7,320.4,318.7,320.4,318.8,320.4L318.8,320.4z">
+                                                    </path>
+                                                </svg>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 col-md-12 col-lg-6 ">
+                                    <div class="">
+                                        <span>
+                                            <i class="fa-solid fa-quote-right fa-6x"></i>
+                                        </span>
+                                        <h5 class="fs-4 lh-sm">Moonlight newspaper up its enjoyment agreeable depending.
+                                            Timed
+                                            voice
+                                            share led him to widen noisy young. At weddings believed in laughing</h5>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-solid fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item m-0">
+                                                <i class="fa-regular fa-star-half-stroke"></i>
+                                            </li>
+                                        </ul>
+                                        <h5 class="fw-bold fs-6">Billy Vasquez</h5>
+                                        <p class="text-muted">Ceo of Apple</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button
+                    class="carousel-control-prev rounded-circle  border border-3 border-dark  top-50 translate-middle-y "
+                    type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left text-dark fa-2x"></i>
+
+                </button>
+                <button
+                    class="carousel-control-next  rounded-circle border border-3 border-dark top-50 translate-middle-y "
+                    type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right text-dark fa-2x"></i>
+                </button>
+            </section>
+        </section>
+
+        <section class="nearby mt-5">
+            <div class="container">
+                <div class="row  gy-5">
+                    <div class="nearby-heading">
+                        <h2 class="fw-bolder text-center pb-4">Explore Nearby
+                        </h2>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/01.jpg"
+                                alt="San francisco city">
+                            <h2 class="fs-5 pt-2 fw-bold ">San Francisco </h2>
+                            <p class="text-muted">13 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/02.jpg"
+                                alt="Los Angeles city">
+                            <h2 class="fs-5 pt-2 fw-bold ">Los Angeles </h2>
+                            <p class="text-muted">25 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/03.jpg"
+                                alt="Miami city">
+                            <h2 class="fs-5 pt-2 fw-bold ">Miami </h2>
+                            <p class="text-muted">45 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/04.jpg"
+                                alt="Sanjosh city">
+                            <h2 class="fs-5 pt-2 fw-bold ">Sanjosh </h2>
+                            <p class="text-muted">55 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/05.jpg"
+                                alt="New York city">
+                            <h2 class="fs-5 pt-2 fw-bold">New York </h2>
+                            <p class="text-muted">1-hour drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/06.jpg"
+                                alt="North justen city">
+                            <h2 class="fs-5 pt-2 fw-bold">North justen </h2>
+                            <p class="text-muted">2-hour drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/07.jpg" alt="Rio city">
+                            <h2 class="fs-5 pt-2 fw-bold">Rio </h2>
+                            <p class="text-muted">20 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/08.jpg"
+                                alt="Las Vegas city">
+                            <h2 class="fs-5 pt-2 fw-bold">Las Vegas </h2>
+                            <p class="text-muted">3-hour drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/09.jpg" alt="Texascity">
+                            <h2 class="fs-5 pt-2 fw-bold">Texas </h2>
+                            <p class="text-muted">55 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/10.jpg"
+                                alt="Chicage city">
+                            <h2 class="fs-5 pt-2 fw-bold">Chicage </h2>
+                            <p class="text-muted">13 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/11.jpg"
+                                alt="New Keagan city">
+                            <h2 class="fs-5 pt-2 fw-bold">New Keagan </h2>
+                            <p class="text-muted">35 min drive</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                        <div class="img-nearby w-75 text-center">
+                            <img class="rounded-circle w-100" src="images/category/hotel/nearby/01.jpg" alt="Oslo city">
+                            <h2 class="fs-5 pt-2 fw-bold">Oslo </h2>
+                            <p class="text-muted">1 hour 13 min drive</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="Download mt-5 p-5">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-md-6">
+                        <div
+                            class="help rounded-4 text-black py-4 bg-white d-flex justify-content-start align-items-start  ">
+                            <div class="icon-help">
+                                <i class="fa-solid fa-hand-holding-heart fa-2x px-3"></i>
+                            </div>
+                            <div class="item-help">
+                                <h4 class="text-black fw-bold fs-5">24x7 Help
+                                </h4>
+                                <p class="text-muted">If we fall short of your expectation in any way, let us know
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="help rounded-4  text-black py-4 bg-white d-flex justify-content-start align-items-start  ">
+                            <div class="icon-help">
+                                <i class="fa-solid fa-hand-holding-usd fa-2x px-3"></i>
+                            </div>
+                            <div class="item-help">
+                                <h4 class="text-black fw-bold fs-5">Payment Trust
+                                </h4>
+                                <p class="text-muted">All refunds come with no questions asked guarantee
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-black fw-bold">Download app
+                    </h4>
+                    <div class="btn-download">
+                        <div class="row">
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                                <a href="#">
+                                    <img class="rounded-3 w-100" src="images/element/google-play.svg" alt="google-play">
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                                <a href="#">
+                                    <img class="rounded-3 w-100" src="images/element/app-store.svg" alt="app-store">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row gy-5 mt-3 text-light">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="Departure">
+                            <a href="#">
+                                <img class="w-50" src="images/logo-light.svg" alt="logo-light plan ">
+                            </a>
+                            <p class="py-3">Departure defective arranging rapturous did believe him all had supported.
+                            </p>
+                            <p>
+                                <a href="#">
+                                    <i class="fa-solid fa-mobile-screen me-2"></i> +1234 568 963
+                                </a>
+                            </p>
+                            <p>
+                                <a href="#">
+                                    <i class="fa-regular fa-envelope me-2"></i> example@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-2 col-md-3 col-sm-6 col-6 ">
+                        <h4 class="fw-bold">Page</h4>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    News and Blog
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    Meet a Team
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6 ">
+                        <h4 class="fw-bold">Link</h4>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#">Sign Up</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Sign in</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Terms</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Cookie</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6 ">
+                        <h4 class="fw-bold">Glopal Site</h4>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#">India</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">California</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Indonesia</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Canada</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">Malaysia</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <h4 class="fw-bold">Booking</h4>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#">
+                                    <i class="fa-solid fa-hotel me-2"></i>
+                                    <span>Hotel</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane me-2"></i>
+                                    <span>Flight</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <i class="fa-solid fa-globe-americas me-2"></i>
+                                    <span>Tour</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <i class="fa-solid fa-car me-2"></i>
+                                    <span>Cabs</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-links">
+                        <h4 class="fw-bold">Top Links</h4>
+                        <ul class="list-inline lh-lg">
+                            <li class="list-inline-item">
+                                <a href="#">Flights</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Hotels</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Tour</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Cabs</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Blog</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Services</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Tour</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Detail Page</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Services</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Policy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Testimonials</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Newsletters</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Podcasts</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Protests</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">NewsCyber</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Education</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Sports</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Tech and Auto</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Opinion</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Share Market</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-between border-bottom border-1 border-light border-opacity-25 py-3">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <ul class=" payment list-inline">
+                                <h4 class="fw-bold py-3">Payment & Security
+                                </h4>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <img class="h-30px" src="images/element/paypal.svg" alt="Payment by paypal">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <img class="h-30px " src="images/element/visa.svg" alt="visa by paypal">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <img class="h-30px " src="images/element/mastercard.svg"
+                                            alt="mastercard by paypal">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <img class="h-30px" src="images/element/expresscard.svg"
+                                            alt="expresscard by paypal">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 text-md-end ">
+                            <div class="list-inline text-white ">
+                                <h4 class="fw-bold py-3 ">Follow us on</h4>
+                                <span class="fa-stack me-2 facebook ">
+                                    <a href="#">
+                                        <i class="  fa-solid fa-square fa-stack-2x"></i>
+                                        <i class="fab fa-fw fa-facebook-f fa-inverse  fa-stack-1x rounded-2"></i>
+                                    </a>
+                                </span>
+                                <span class="fa-stack me-2 instagram">
+                                    <a href="#">
+                                        <i class="fa-solid fa-square fa-stack-2x"></i>
+                                        <i class="fab fa-fw fa-instagram  fa-stack-1x rounded-2"></i>
+                                    </a>
+                                </span>
+                                <span class="fa-stack me-2 twitter">
+                                    <a href="#">
+                                        <i class="fa-solid fa-square fa-stack-2x"></i>
+                                        <i class="fab fa-fw fa-twitter fa-stack-1x rounded-2"></i>
+                                    </a>
+                                </span>
+                                <span class="fa-stack linkedin-in">
+                                    <a href="#">
+                                        <i class="fa-solid fa-square fa-stack-2x"></i>
+                                        <i class="fab fa-fw fa-linkedin-in fa-stack-1x rounded-2"></i>
+                                    </a>
+                                    </li>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row py-4  justify-content-between  ">
+                            <div class="col-lg-6 ">
+                                <div class="copy-right ">
+                                    <p>Copyrights ©2023 Booking. Build by
+                                        <span><a href="https://www.webestica.com/">Webestica.</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-lg-end ">
+                                <ul class="privacy list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#">Privacy policy
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#">Terms and conditions
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#">Refund policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+
+
+
+                            <!-- <div class="d-flex justify-content-between">
+                             
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

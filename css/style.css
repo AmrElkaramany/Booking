@@ -1,0 +1,473 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* start navbar */
+.navbar-brand {
+    width: 10%;
+}
+
+.nav-notification {
+    width: 2.6rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.hftc li:hover {
+    color: #5143D9;
+    background-color: #EDECFB;
+}
+
+.hftc li:hover a {
+    color: #5143D9;
+}
+
+.nav-item .hotel-item {
+    background-color: #EDECFB;
+
+}
+
+.nav-item .active i {
+    color: #5143D9;
+}
+
+.nav-item .hotel-item {
+    color: #5143D9;
+}
+
+.dropdown-toggle:hover  {
+    color: #5143D9;
+}
+
+.dropdown-menue {
+    display: none;
+}
+.nav-item:hover .dropdown-menue  {
+    display: block;
+}
+
+/* Start hotels */
+.fill-primary {
+    fill: #857BE4;
+}
+
+.btn-discover {
+    color: #5B4EDB;
+    background-color: #E4E2F9;
+    font-weight: 900;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block !important;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.z-index-1 {
+    z-index: 1 !important;
+}
+
+.meee-2 {
+    margin-right: 0.5rem;
+}
+
+.icon-lg {
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.icon-xl {
+    width: 5rem;
+    height: 5rem;
+}
+
+.hotels .location {
+    position: absolute;
+    top: -19%;
+    left: 20%;
+    background-color: white;
+}
+
+.hotels i {
+    color: #747579;
+}
+
+.Availability {
+    position: absolute;
+    top: 70%;
+    z-index: 33;
+}
+
+.parent-avail {
+    gap: 70px;
+}
+
+.btn-search {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.parent-avail .btn-round {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    background-color: #5143D3;
+}
+
+.btn-search .icon-lg {
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Start Holidays */
+.Holidays h2 {
+    font-size: 3.1rem;
+    font-weight: 900;
+    color: #0B0A12;
+}
+
+.Holidays h4 {
+    font-size: 22px;
+    font-weight: 900;
+    color: #0B0A12;
+}
+
+.Holidays p {
+    color: #747579;
+    font-size: 15px;
+}
+
+.Holidays span {
+    font-size: 28px;
+}
+
+.icon-a {
+    color: rgb(228, 241, 228);
+}
+
+.icon-b {
+    color: #f0e9ea;
+}
+
+.icon-c {
+    color: #FFF2E7;
+}
+
+.icon-d {
+    color: #E7F6F8;
+}
+
+.iconk {
+    color: #5143D9;
+    margin-left: -20px;
+}
+
+.avatar {
+    margin-left: -15px;
+}
+
+.item-inner {
+    position: relative;
+}
+
+.inner {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+}
+
+.inner .like {
+    width: 10%;
+}
+
+.fill-warning {
+    fill: #f7c32e !important;
+}
+
+.item-inner .fig2 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* End  Holidays*/
+/* Start Featured  */
+
+.Featured h2 {
+    font-size: 3.3rem;
+    font-weight: 900;
+    color: #0B0A12;
+}
+
+.item-Featured div h4, h5, span, i {
+    font-size: 15px;
+}
+
+.item-Featured div a h5 {
+    color: #50CFA8;
+    font-weight: 500;
+
+}
+
+.item-Featured div a h5 span {
+    color: #0CBC87;
+    font-weight: 900;
+}
+
+.item-Featured a h4 {
+    color: black;
+    font-size: 20px;
+    transition: color 500ms;
+}
+
+.item-Featured:hover h4 {
+    color: #5143D9;
+    font-weight: 900;
+}
+
+.item-Featured .location a {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+
+}
+
+.item-Featured {
+    overflow: hidden;
+}
+
+.item-Featured img {
+    transition: all 0.3s ease-in-out;
+    transform: translateZ(0);
+}
+
+.item-Featured:hover img {
+    transform: scale(1.01);
+}
+
+/* End Featured */
+/* Start Clients */
+.clients {
+    padding: 60px 0;
+}
+
+.clients img {
+    color: #A8A8A8;
+    filter: grayscale(100%);
+    transition: all 0.6s ease;
+}
+
+.clients img:hover {
+    filter: grayscale(0%);
+}
+
+/* start passage */
+.passage div span i {
+    color: #5143D9;
+}
+
+.passage ul li i {
+    color: #F7C32E;
+}
+
+.passage .emoji {
+    width: 10%;
+    top: 20%;
+    left: 2%;
+}
+
+.passage figure {
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.carousel-control-next {
+    width: 40px !important;
+    height: 40px;
+    right: -60px;
+    transition: all 0.2s;
+
+}
+
+.carousel-control-prev {
+    width: 40px !important;
+    height: 40px;
+    left: -60px;
+    transition: all 0.2s;
+}
+
+.passage:hover .carousel-control-next {
+    right: 0;
+}
+
+.passage:hover .carousel-control-prev {
+    left: 0;
+}
+
+/* End passage */
+/* start Nearby */
+
+.nearby-heading h2 {
+    font-size: 3rem;
+    color: #0B0A12;
+
+}
+
+.img-nearby h2 {
+    color: #0B0A12;
+}
+
+.img-nearby:hover {
+    cursor: pointer;
+
+}
+
+.img-nearby:hover h2 {
+    color: #5143D9;
+}
+
+/* End Nearby */
+
+
+/* Start Download  */
+.Download {
+    background-color: #F5F5F6;
+}
+
+.Download .item-help p {
+    font-size: 14px;
+}
+
+/* End Download  */
+
+/* start footer */
+footer {
+    background-color: #0B0A12;
+}
+
+footer ul li a {
+    transition: color 500ms;
+}
+
+footer ul li:hover a {
+    color: #5143D9;
+}
+
+.Departure p a {
+    transition: color 500ms;
+}
+
+.Departure p:hover a {
+    color: #5143D9;
+}
+
+footer p, a {
+    color: #c5c5c7;
+    text-decoration: none;
+}
+
+.top-links ul li a {
+    transition: color 500ms;
+}
+
+.top-links ul li:hover a {
+    color: #5143D9;
+}
+
+.payment .h-30px {
+    height: 30px;
+}
+
+.fa-facebook-f {
+    background-color: #5D82D1;
+}
+
+.fa-instagram {
+    background-color: #C12B72;
+}
+
+.fa-twitter {
+    background-color: #40BEF3;
+}
+
+.fa-linkedin-in {
+    background-color: #238CC8;
+}
+
+.fa-stack {
+    font-size: 13px;
+}
+
+.facebook:hover i {
+    background-color: #3d6fdb;
+    border-radius: 20%;
+}
+
+.instagram:hover i {
+    background-color: #de3d88;
+    border-radius: 20%;
+}
+
+.twitter:hover i {
+    background-color: #2a9ccd;
+    border-radius: 20%;
+}
+
+.linkedin-in:hover i {
+    background-color: #167ab4;
+    border-radius: 20%;
+}
+
+.copy-right {
+    font-size: 14px;
+}
+
+.copy-right span a {
+    transition: color 500ms;
+}
+
+.copy-right span:hover a {
+    color: #5143D9;
+}
+
+.privacy {
+    font-size: 14.3px;
+}
+
+.privacy ul li {
+    font-size: 14px;
+}
+
+.privacy ul li a {
+    transition: color 500ms;
+}
+
+.privacy li:hover a {
+    color: #5143D9;
+}
+
+/* End Footer */
